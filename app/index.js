@@ -86,7 +86,7 @@ module.exports = generators.Base.extend({
     copy('.gitignore');
     copy('package.json');
     copy('gulpfile.js');
-    copy('.eslintrc');
+    copy('.jshintrc');
     copy('.npmignore');
     copy('src/index.js');
     copy('test/test.js');
