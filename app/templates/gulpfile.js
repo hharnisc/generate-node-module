@@ -1,5 +1,3 @@
-"use strict";
-
 var gulp = require("gulp");
 var eslint = require("gulp-eslint");
 var gulpNodemon = require("gulp-nodemon");
