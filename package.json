@@ -1,7 +1,7 @@
 {
   "name": "generator-node-module",
   "version": "0.1.0",
-  "description": "Generate node modules",
+  "description": "Babel + Tape + Eslint (airbnb) node module generator",
   "files": [
     "app"
   ],
