@@ -4,9 +4,10 @@
 
 ## Run
     npm install
+    npm run build
     npm start
 
 
 ## Test
     npm test
-    npm run tdd  # (Watch)
+    npm run test:watch

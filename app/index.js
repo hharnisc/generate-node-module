@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 var _ = require('lodash');
 var generators = require('yeoman-generator');
 var chalk = require('chalk');
@@ -7,16 +7,9 @@ var chalk = require('chalk');
 *  Generator for constructing a simple node module.
 */
 module.exports = generators.Base.extend({
-  constructor: function () {
-    generators.Base.apply(this, arguments);
-  },
-
-  /**
-  *  Asks for details about the module.
-  */
-  prompting: function () {
+  init: function () {
+    const done = this.async();
     // See: https://github.com/SBoudrias/Inquirer.js
-    var done = this.async();
     this.prompt([
       {
         type: 'input',
@@ -61,13 +54,10 @@ module.exports = generators.Base.extend({
         if (answers.githubUrl !== '') {
           answers.baseUrl = answers.githubUrl.split('.git')[0]
         }
-
         this.strings = answers;
         done();
     }.bind(this));
   },
-
-
 
   /**
   *  Copy over the file templates.
@@ -81,16 +71,13 @@ module.exports = generators.Base.extend({
                     this.strings
                   );
                 }.bind(this);
-
-    copy('README.md');
-    copy('.gitignore');
-    copy('package.json');
-    copy('gulpfile.js');
+    copy('src/index.js');
+    copy('test/index.js');
     copy('.babelrc');
     copy('.eslintrc');
-    copy('.npmignore');
-    copy('src/index.js');
-    copy('test/test.js');
+    copy('.gitignore');
+    copy('package.json');
+    copy('README.md');
   },
 
   default: function() {

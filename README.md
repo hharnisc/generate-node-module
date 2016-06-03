@@ -7,7 +7,7 @@ See: http://substack.net/how_I_write_modules
 
 ## Setup
 
-    npm install -g yo gulp
+    npm install -g yo
 
 Clone the generator then run:
 

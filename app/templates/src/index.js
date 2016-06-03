@@ -1,1 +1,3 @@
-console.log("Started [<%= name %>]");
+const index = () => true;
+
+export default index;
