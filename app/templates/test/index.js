@@ -1,7 +1,9 @@
-import test from 'tape';
+jest.unmock('../src/index');
 import index from '../src/index';
 
-test('<%= name %> tests', (t) => {
-  t.equal(index(), true, 'succeeds');
-  t.end();
+describe('<%= name %> tests', () => {
+  it('succeeds', () => {
+    expect(index())
+      .toBe(true);
+  });
 });
